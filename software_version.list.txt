@@ -1,0 +1,26 @@
+
+実行時(2020/12 - 2021/12のSHIROKANE OS=5)
+python=2.7
+R=3.4
+perl=SHIROKANE OS=5のデフォルトバージョン
+ruby=SHIROKANE OS=5のデフォルトバージョン
+
+Cutadapt = 1.18
+PRINSEQ-lite = 0.20.4
+SPAdes = 3.13
+CD-HIT-EST = 4.8
+BLAST+ = 2.5
+MetaPhlAn v2 = 2.5.0
+VirSorter = 1.0.3
+GHOST-MP = 1.3.4
+HMMER = 3.1b2
+bedtools = 2.25.0
+seqkit = 0.12.1
+Samtools = 1.9
+BBMap = 35.85
+MetaProdigal = 2.6.3
+Open MPI = 3.1.0
+PhyloPythiaS
+
+
+
