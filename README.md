@@ -6,7 +6,7 @@ The pipeline codes are written by Dr. Yasumasa Kimura.
 
 ## Usage
 
-The codes are intended to be run on [SHIROKANE Supercomputer](https://gc.hgc.jp/en/) environment. Each script submits the necessary jobs by `qsub` in each step per sample. `infile` package must be installed by `gem install inifile`. The `dir_home_` variable in each script must be set to the pipeline directory holding the `scripts` directory and a user-defined `profile` file specifying the environmental variables while running the script. Also, the software directory (e.g. `cutadapt_dir`) should be set to the path to the software.
+The codes are intended to be run on [SHIROKANE Supercomputer](https://gc.hgc.jp/en/) environment. Each script submits the necessary jobs by `qsub` in each step per sample. `inifile` package must be installed by `gem install inifile`. The `dir_home_` variable in each script must be set to the pipeline directory holding the `scripts` directory and a user-defined `profile` file specifying the environmental variables while running the script. Also, the software directory (e.g. `cutadapt_dir`) should be set to the path to the software.
 
 Two configuration files must be made to specify the sample and project information as below.
 
