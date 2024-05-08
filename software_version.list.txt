@@ -1,9 +1,10 @@
 
-実行時(2020/12 - 2021/12のSHIROKANE OS=5)
+SHIROKANE OS5
+
 python=2.7
 R=3.4
-perl=SHIROKANE OS=5のデフォルトバージョン
-ruby=SHIROKANE OS=5のデフォルトバージョン
+perl=5.26.1
+ruby=2.5.1
 
 Cutadapt = 1.18
 PRINSEQ-lite = 0.20.4
@@ -21,6 +22,3 @@ BBMap = 35.85
 MetaProdigal = 2.6.3
 Open MPI = 3.1.0
 PhyloPythiaS
-
-
-

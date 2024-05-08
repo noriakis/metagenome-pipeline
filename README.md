@@ -56,7 +56,7 @@ The database files must be downloaded or compiled, and the custom path must be s
 	- PhyloPythiaS+ software: https://github.com/algbioi/ppsp/wiki
 - `14_pfam_search.split.rb`
 	- `db` variable
-	- PFam HMM files: https://www.ebi.ac.uk/interpro/download/Pfam/
+	- Pfam HMM files: https://www.ebi.ac.uk/interpro/download/Pfam/
 - `14_kegg_search.split.rb`
 	- [GHOST-MP](https://www.bi.cs.titech.ac.jp/ghostmp/index.html) database must be compiled beforehand by using KEGG GENES fasta file (e.g. `kegg.#{db_date}/genes/fasta/prokaryotes.pep`), and be specified to the `db` path. Accordingly, the `db_date` parameter in the `h_params` should be changed to reflect the version of KEGG database used.
 - `scripts/*`
