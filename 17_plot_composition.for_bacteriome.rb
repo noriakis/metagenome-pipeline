@@ -1,6 +1,6 @@
 
 #--------------------------------------------------
-# Program: 17_plot_compostiion.for_bacteriome.rb
+# Program: 17_plot_composition.for_bacteriome.rb
 # Author: Yasumasa Kimura
 #--------------------------------------------------
 version = "1.0.0"

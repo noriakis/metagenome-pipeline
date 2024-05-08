@@ -8,7 +8,7 @@ The pipeline codes are written by Dr. Yasumasa Kimura.
 
 The codes are intended to be run on [SHIROKANE Supercomputer](https://gc.hgc.jp/en/) environment. Each script submits the necessary jobs by `qsub` in each step per sample. `infile` package must be installed by `gem install inifile`. The `dir_home_` variable in each script must be set to the pipeline directory holding the `scripts` directory and a user-defined `profile` file specifying the environmental variables while running the script. Also, the software directory (e.g. `cutadapt_dir`) should be set to the path to the software.
 
-Two configure files must be made to specify the sample and project information as below.
+Two configuration files must be made to specify the sample and project information as below.
 
 - `info.raw_data.cfg`
 
@@ -61,6 +61,7 @@ The database files must be downloaded or compiled, and the custom path must be s
 	- [GHOST-MP](https://www.bi.cs.titech.ac.jp/ghostmp/index.html) database must be compiled beforehand by using KEGG GENES fasta file (e.g. `kegg.#{db_date}/genes/fasta/prokaryotes.pep`), and be specified to the `db` path. Accordingly, the `db_date` parameter in the `h_params` should be changed to reflect the version of KEGG database used.
 - `scripts/*`
 	- The path specification beginning with `/home/user` must be replaced with the path pointing to the databases (e.g. `ko_genes_ = "/home/user/kegg.20180916/genes/ko/ko_genes.list"` in `assign_kegg.blast.py` must be replaced with the path pointing to KEGG database starting with `kegg.#{db_date}`).
+    - Note that the files `ko_genes.list`, `ko_module.list`, and `ko_pathway.list` in the scripts directory is the mapping file from `links.tar.gz` or `genes_ko.list.gz` in the database, with the modification that KO identifiers as the first column and linked identifiers as the second.
 
 After the configuration, each step can be run by:
 
