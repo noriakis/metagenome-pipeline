@@ -22,7 +22,7 @@ profile_ = "#{dir_home_}/pipeline/profile"
 db_label = "metaphlan2_v20"
 tax_ann = "read.#{db_label}"
 
-script_composition_ = "#{dir_scripts_}/plot_compostiion.bacteriome.R"
+script_composition_ = "#{dir_scripts_}/plot_composition.bacteriome.R"
 
 # loading setting file
 abort "Abort: ./setting.cfg does not exist." if ! File.exist?('./setting.cfg')
@@ -49,7 +49,7 @@ inifile.each_section do |section|
 	# input directories
 	dir_in_ = "#{dir_project_}/d08_bacterial_taxonomic_profile/#{org_merge_label}"
 	# output directory
-	dir_out_ = "#{dir_project_}/d17_plot_compostiion/#{merge_label}"
+	dir_out_ = "#{dir_project_}/d17_plot_composition/#{merge_label}"
 	FileUtils.mkdir_p(dir_out_) unless FileTest.exist?(dir_out_)
 
 	# input
