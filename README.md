@@ -1,6 +1,6 @@
 # metagenome-pipeline
 
-This repository stores the codes to reproduce the analysis in [Fujimoto et al. 2024](URLTBU). `software_version.list.txt` lists the version of software used in the analysis. The analysis was conducted on SHIROKANE OS5.
+This repository stores the codes to reproduce the analysis in Fujimoto et al. 2024. `software_version.list.txt` lists the version of software used in the analysis. The analysis was conducted on SHIROKANE OS5.
 
 The pipeline codes are written by Dr. Yasumasa Kimura.
 
