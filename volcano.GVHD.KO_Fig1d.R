@@ -16,10 +16,10 @@ library(plyr)
 library(ggpubr)
 library(ggrepel)
 
-# Define target_number by number of samples of the target (In data_table, control samples must be placed sequentially first, followed by target samples. 
+# Define control_number by number of samples of the control (In data_table, control samples must be placed sequentially first, followed by target samples. 
 #Otherwise, v.samples1 and v.samples2 must be defined manually, such as v.samples1<-c("sample001", "sample002", ..). etc. )
 
-target_number <- 19
+control_number <- 19
 target_name <- "E.faecalis"
 control_name<- "E.faecium"
 significant_target <-paste("Significant in",target_name)
@@ -41,10 +41,10 @@ df.in.all <-read.table(data_table, header=T, sep="\t", quote="", stringsAsFactor
 col_names <- colnames(df.in.all)
 
 # Creating v.samples1 vector (control)
-v.samples1 <- col_names[1:target_number+1]
+v.samples1 <- col_names[1:control_number+1]
 
 # Creating v.samples2 vector (target)
-v.samples2 <- col_names[(target_number + 2):length(col_names)]
+v.samples2 <- col_names[(control_number + 2):length(col_names)]
 
 # Printing the vectors
 print(v.samples1)
@@ -112,14 +112,15 @@ for(out_type in v.out_type){
                 print(nrow(df.x))
                 v.x <- log2(df.x[,"fold_change"])
                 v.y <- -log10(df.x[,"q_wilcox"])
-                v.name <- df.x[,"name"]
-                v.select <- rep("Not significant", nrow(df.x))
+#                v.name <- df.x[,"name"]
+                v.name <-"" 
+               v.select <- rep("Not significant", nrow(df.x))
                 v.select[v.x > thre_log_fc & v.y > thre_log_q] <- significant_target
                 v.select[v.x < -thre_log_fc & v.y > thre_log_q] <- significant_control
-		v.name<-ifelse(v.name == "K01791","K01791: wecB",
-			ifelse(v.name == "K08605","K08605: gelE",
-			ifelse(v.name == "K05946","K05946: tagA, tarA",
-			ifelse(v.name == "K07173","K07173: luxS",""))))  
+#               v.name<-ifelse(v.name == "K01791","K01791: wecB",
+#                       ifelse(v.name == "K08605","K08605: gelE",
+#                       ifelse(v.name == "K05946","K05946: tagA, tarA",
+#                       ifelse(v.name == "K07173","K07173: luxS",""))))  
                 x_lab_ <- paste("log2(",target_name,"/",control_name,")")
                 max_value_x <- ceiling(max(log2(df.x[,"fold_change"])))
                 min_value_x <-floor(min(log2(df.x[,"fold_change"])))
